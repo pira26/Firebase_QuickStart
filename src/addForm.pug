@@ -1,0 +1,27 @@
+div
+    h2 Form
+    form#form
+        div
+            label(for='username') Username
+            input(type='text' name='username' placeholder='Username')#username
+
+        div
+            label(for='name') Name
+            input(type='text' name='name' placeholder='Name')#name
+
+        div
+            label(for='description') Description
+            textarea(name='description' placeholder='Description')#description
+
+        div
+            label(for='email') Email
+            input(type='email' name='email' placeholder='Email')#email
+
+        div
+            label(for='password') Password
+            input(type='password' name='password' placeholder='Password')#password
+
+        div
+            input(type='submit' value="ADD" onclick='writeUserData')#add
+            div
+                a(href='../src/editForm.html') Modify
