@@ -1,0 +1,27 @@
+mixin head(addScript)
+
+    doctype html
+    html(lang='en')
+        head
+            meta(charset='UTF-8')
+            title Firebase
+            link(rel='stylesheet', href='css/foundation.css')
+            script(src='https://www.gstatic.com/firebasejs/4.1.2/firebase.js')
+            script.
+                // Initialize Firebase
+                var config = {
+                    apiKey: "AIzaSyD25egzK87UH5cAw4BJNpctbwM3leGpw0Y",
+                    authDomain: "fir-quickstart-a6cc2.firebaseapp.com",
+                    databaseURL: "https://fir-quickstart-a6cc2.firebaseio.com",
+                    projectId: "fir-quickstart-a6cc2",
+                    storageBucket: "",
+                    messagingSenderId: "650278586306"
+                };
+                firebase.initializeApp(config);
+            script(src='js/vendor/jquery.js')
+            script(src='js/vendor/foundation.min.js')
+            script(src='js/dbManager.js')
+            if addScript
+                script(src=addScript)
+        if block
+            block

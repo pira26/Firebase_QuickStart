@@ -1,6 +1,11 @@
+include mixins/_head
+include mixins/_menu
+
++head('./js/addUser.js')
++menu()
 div
     h2 Form
-    form#form
+    form#addForm
         div
             label(for='username') Username
             input(type='text' name='username' placeholder='Username')#username
@@ -22,6 +27,4 @@ div
             input(type='password' name='password' placeholder='Password')#password
 
         div
-            input(type='submit' value="ADD" onclick='writeUserData')#add
-            div
-                a(href='../src/editForm.html') Modify
+            button(onclick='addUser()', type='button').button.success ADD
