@@ -13,7 +13,7 @@ window.onload = () => {
 
 const addUser = () => {
 
-    db.ref('users/')
+    userRef
         .push(
             {
             username: username.value,
