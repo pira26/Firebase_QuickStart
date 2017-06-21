@@ -20,12 +20,14 @@ userRef.on('value', snapshot => {
         tbody.innerHTML = `<tr>Name: ${user.name}</tr>
                            <tr>Email: ${user.email}</tr>`;
         tfoot.innerHTML = `Description: ${user.description}`;
-        edit.innerHTML = `Edit`;
+        edit.innerHTML = 'Edit';
         edit.classList = 'button';
         edit.setAttribute('onclick', 'editUser()');
-        remove.innerHTML = `Remove`;
+        edit.setAttribute('type', 'button');
+        remove.innerHTML = 'Remove';
         remove.classList = 'button warning';
         remove.setAttribute('onclick', 'removeUser()');
+        remove.setAttribute('type', 'button');
         users.append(thead, tbody, tfoot, edit, remove);
     });
 
